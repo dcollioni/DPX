@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Dpx.Controllers;
+using Raven.Client;
+using Raven.Client.Document;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,6 +14,26 @@ namespace Dpx
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        public static IDocumentStore DocumentStore { get; set; }
+
+        public MvcApplication()
+        {
+            BeginRequest += (sender, args) =>
+            {
+                HttpContext.Current.Items["CurrentRequestRavenSession"] = RavenController.DocumentStore.OpenSession();
+            };
+
+            EndRequest += (sender, args) =>
+            {
+                using (var session = (IDocumentSession)HttpContext.Current.Items["CurrentRequestRavenSession"])
+                {
+                    if (session == null) return;
+                    if (Server.GetLastError() != null) return;
+                    session.SaveChanges();
+                }
+            };
+        }
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
@@ -19,6 +42,8 @@ namespace Dpx
             RouteConfig.Configure(RouteTable.Routes);
             BundleConfig.Configure(BundleTable.Bundles);
             AuthConfig.Configure();
+            DocumentStoreConfig.Configure();
+            RavenController.DocumentStore = DocumentStore;            
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Dpx.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : RavenController
     {
         public ActionResult Index()
         {

@@ -40,7 +40,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Raven.Abstractions">
+      <HintPath>..\packages\RavenDB.Client.2.0.2230\lib\net40\Raven.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Raven.Client.Lightweight">
+      <HintPath>..\packages\RavenDB.Client.2.0.2230\lib\net40\Raven.Client.Lightweight.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
@@ -155,9 +162,12 @@
   <ItemGroup>
     <Compile Include="Configuration\AuthConfig.cs" />
     <Compile Include="Configuration\BundleConfig.cs" />
+    <Compile Include="Configuration\DocumentStoreConfig.cs" />
     <Compile Include="Configuration\FilterConfig.cs" />
     <Compile Include="Configuration\RouteConfig.cs" />
     <Compile Include="Configuration\WebApiConfig.cs" />
+    <Compile Include="Controllers\PostController.cs" />
+    <Compile Include="Controllers\RavenController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -179,7 +189,6 @@
     <Content Include="Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Assets\Images\" />
     <Folder Include="Assets\JavaScripts\" />
     <Folder Include="Assets\Stylesheets\" />
@@ -187,6 +196,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dpx.Core\Dpx.Core.csproj">
+      <Project>{2c389d94-79a1-4207-8873-1f43c98db26e}</Project>
+      <Name>Dpx.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

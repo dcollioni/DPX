@@ -1,0 +1,21 @@
+﻿using Raven.Client;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace Dpx.Controllers
+{
+    public abstract class RavenController : Controller
+    {
+        public static IDocumentStore DocumentStore { get; set; }
+
+        public IDocumentSession RavenSession { get; set; }
+
+        protected override void OnActionExecuting(ActionExecutingContext filterContext)
+        {
+            RavenSession = (IDocumentSession)HttpContext.Items["CurrentRequestRavenSession"];
+        }
+    }
+}
