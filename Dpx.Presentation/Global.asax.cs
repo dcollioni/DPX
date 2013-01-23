@@ -16,20 +16,20 @@ namespace Dpx.Presentation
     {
         public MvcApplication()
         {
-            BeginRequest += (sender, args) =>
-            {
-                HttpContext.Current.Items["CurrentRequestRavenSession"] = RavenController.Store.OpenSession();
-            };
-
-            EndRequest += (sender, args) =>
-            {
-                using (var session = (IDocumentSession)HttpContext.Current.Items["CurrentRequestRavenSession"])
-                {
-                    if (session == null) return;
-                    if (Server.GetLastError() != null) return;
-                    session.SaveChanges();
-                }
-            };
+            //BeginRequest += (sender, args) =>
+            //{
+            //    HttpContext.Current.Items["CurrentRequestRavenSession"] = RavenController.Store.OpenSession();
+            //};
+            //
+            //EndRequest += (sender, args) =>
+            //{
+            //    using (var session = (IDocumentSession)HttpContext.Current.Items["CurrentRequestRavenSession"])
+            //    {
+            //        if (session == null) return;
+            //        if (Server.GetLastError() != null) return;
+            //        session.SaveChanges();
+            //    }
+            //};
         }
 
         protected void Application_Start()
@@ -37,7 +37,7 @@ namespace Dpx.Presentation
             AreaRegistration.RegisterAllAreas();
             FilterConfig.Configure(GlobalFilters.Filters);
             RouteConfig.Configure(RouteTable.Routes);
-            RavenDbConfig.Configure();
+            //RavenDbConfig.Configure();
         }
     }
 }
