@@ -17,7 +17,7 @@
         header
         {
             height: 70px;
-            margin: 10px 2%;
+            margin: 20px 2%;
         }
         
         header img
@@ -44,12 +44,86 @@
             -moz-user-select: none;
             user-select: none;
         }
+        
+        #topline
+        {
+            background-color: #0098CB;
+            box-shadow: 0px 0px 80px #0098CB;
+            height: 4px;
+        }
+        
+        #menu
+        {
+            display: inline;
+            float: right;
+            margin: 40px 5px 0 0 ;
+            vertical-align: bottom;
+        }
+        
+        #menu ul
+        {
+            list-style: none;
+            margin: 0;
+        }
+        
+        #menu ul li
+        {
+            display: inline-block;
+            margin: 0 3px;
+        }
+        
+        #menu ul li a
+        {
+            color: #444;
+            text-decoration: none;
+        }
+        
+        #menu ul li a:hover
+        {
+            text-shadow: 2px 2px #E5E5E5;
+        }
+        
+        #menu ul li a.active
+        {
+            font-weight: bold;
+        }
+        
+        #menu ul li.separator
+        {
+            color: #CCC;
+        }
     </style>
 </head>
 <body>
+    <div id="topline"></div>
+
     <header class="unselectable">
         <img src="logo.png" alt="DPX" />
         <h1>Desenvolvimento<br />de Planilhas em Excel</h1>
+
+        <div id="menu">
+            <ul>
+                <li>
+                    <a href="#" class="active">Página inicial</a>
+                </li>
+                <li class="separator">|</li>
+                <li>
+                    <a href="#">Empresa</a>
+                </li>
+                <li class="separator">|</li>
+                <li>
+                    <a href="#">Serviços</a>
+                </li>
+                <li class="separator">|</li>
+                <li>
+                    <a href="#">Clientes</a>
+                </li>
+                <li class="separator">|</li>
+                <li>
+                    <a href="#">Contato</a>
+                </li>
+            </ul>
+        </div>
     </header>
 </body>
 </html>
