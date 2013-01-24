@@ -4,30 +4,67 @@
     <title>DPX - Desenvolvimento de Planilhas em Excel</title>
 
     <style type="text/css">
+        @font-face
+        {
+            font-family: Sansation;
+            font-style: normal;
+            font-weight: normal;
+            src: url(sansation/Sansation_Regular.ttf);
+        }
+        
+        @font-face
+        {
+            font-family: Sansation;
+            font-style: normal;
+            font-weight: bold;
+            src: url(sansation/Sansation_Bold.ttf);
+        }
+        
         body
         {
             background-image: url(bg.png);
             background-color: #F8F8F8;
             
-            font-family: Arial, Helevetica, Sans-Serif;
+            font-family: Sansation, Arial, Helevetica, Sans-Serif;
             font-size: 12pt;
             margin: 0;
         }
         
-        header
+        li
+        {
+            -webkit-transition: box-shadow 250ms, background-color 250ms, border-color 250ms;
+            -moz-transition: box-shadow 250ms, background-color 250ms, border-color 250ms;
+            transition: box-shadow 250ms, background-color 250ms, border-color 250ms;
+        }
+        
+        img
+        {
+            -webkit-transition: opacity 250ms, box-shadow 250ms;
+            -moz-transition: opacity 250ms, box-shadow 250ms;
+            transition: opacity 250ms, box-shadow 250ms;
+        }
+        
+        /*li
+        {
+            -webkit-transition: background-color 250ms;
+            -moz-transition: background-color 250ms;
+            transition: background-color 250ms;
+        }*/
+        
+        #header
         {
             height: 70px;
             margin: 20px 2%;
         }
         
-        header img
+        #header img
         {
             cursor: pointer;
             float: left;
             margin-right: 10px;
         }
         
-        header h1
+        #header h1
         {
             color: #444;
             cursor: pointer;
@@ -92,12 +129,178 @@
         {
             color: #CCC;
         }
+        
+        #carrousel
+        {
+            height: 300px;
+            margin: 30px 4%;
+            padding: 0;
+            text-align: center;
+        }
+        
+        #carrousel #items
+        {
+            display: inline-block;
+            float: left;
+            margin: 0;
+            padding: 0;
+            width: 20%;
+        }
+        
+        #carrousel #items ul,
+        #carrousel #content ul
+        {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #carrousel #items li
+        {
+            border: 1px solid #BBB;
+            background-color: #D4DFEE;
+            color: #3066AD;
+            cursor: pointer;
+            font-size: 14pt;
+            font-weight: bold;
+            height: 55px;
+            margin: 3px 0;
+            line-height: 54px;
+            text-shadow: 1px 1px #DDD;
+        }
+        
+        #carrousel #items li:hover
+        {
+            border-color: #AAA;
+            box-shadow: 0px 0px 6px #AAA;
+        }
+        
+        #carrousel #items li.active
+        {
+            background-color: #366AAA;
+            border-color: #666;
+            border-right: none;
+            box-shadow: 0px 0px 15px #AAA;
+            color: #D4DFEE;
+            padding-right: 8px;
+            margin-right: -6px;
+            text-shadow: 1px 1px #888;
+        }
+        /*
+        #carrousel #items li.first
+        {
+            background-color: #DEF;
+            background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CDE), color-stop(1, #DEF));
+            background-image: -moz-linear-gradient(top, #DEF 0%, #CDE 100%);
+        }
+        
+        #carrousel #items li.second
+        {
+            background-color: #DFD;
+            background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CEC), color-stop(1, #DFD));
+            background-image: -moz-linear-gradient(top, #DFD 0%, #CEC 100%);
+            
+            background-color: #EEF;
+            background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDE), color-stop(1, #EEF));
+            background-image: -moz-linear-gradient(top, #EEF 0%, #DDE 100%);
+            
+            background-color: #DEF;
+            background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CDE), color-stop(1, #DEF));
+            background-image: -moz-linear-gradient(top, #DEF 0%, #CDE 100%);
+        }
+        
+        #carrousel #items li.third
+        {
+            background-color: #FFD;
+            background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#EEC), color-stop(1, #FFD));
+            background-image: -moz-linear-gradient(top, #FFD 0%, #EEC 100%);
+            
+            background-color: #DEF;
+            background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CDE), color-stop(1, #DEF));
+            background-image: -moz-linear-gradient(top, #DEF 0%, #CDE 100%);
+        }
+        
+        #carrousel #items li.fourth
+        {
+            background-color: #FDD;
+            background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ECC), color-stop(1, #FDD));
+            background-image: -moz-linear-gradient(top, #FDD 0%, #ECC 100%);
+            
+            background-color: #EEF;
+            background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDE), color-stop(1, #EEF));
+            background-image: -moz-linear-gradient(top, #EEF 0%, #DDE 100%);
+            
+            background-color: #DEF;
+            background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CDE), color-stop(1, #DEF));
+            background-image: -moz-linear-gradient(top, #DEF 0%, #CDE 100%);
+        }
+        
+        #carrousel #items li.fifth
+        {
+            background-color: #EEF;
+            background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#DDE), color-stop(1, #EEF));
+            background-image: -moz-linear-gradient(top, #EEF 0%, #DDE 100%);
+            
+            background-color: #DEF;
+            background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#CDE), color-stop(1, #DEF));
+            background-image: -moz-linear-gradient(top, #DEF 0%, #CDE 100%);
+        }
+        */
+        
+        #carrousel #content
+        {
+            background-color: #F2F2F2;
+            box-sizing: border-box;
+            box-shadow: 3px 0px 15px #CCC;
+            border: 1px solid #AAA;
+            border-left: none;
+            display: inline-block;
+            height: 297px;
+            margin: 3px 0;
+            padding: 0;
+            width: 79%;
+        }
+        
+        #carrousel #content ul li
+        {
+            display: none;
+        }
+        
+        #carrousel #content ul li.active .item
+        {
+            height: 100%;
+            width: 100%;
+        }
+        
+        #carrousel #content ul li.active
+        {
+            display: block;
+        }
+        
+        #carrousel #content ul li:hover img
+        {
+            box-shadow: 0px 0px 5px #000;
+        }
+        
+        #carrousel #content ul li img
+        {
+            float: right;
+            height: 100%;
+            width: 50%;
+        }
+        
+         #carrousel #content ul li .text
+         {
+             float: left;
+             margin: 20px;
+         }
+        
     </style>
 </head>
 <body>
     <div id="topline"></div>
 
-    <header class="unselectable">
+    <div id="header" class="unselectable">
         <img src="logo.png" alt="DPX" />
         <h1>Desenvolvimento<br />de Planilhas em Excel</h1>
 
@@ -124,6 +327,69 @@
                 </li>
             </ul>
         </div>
-    </header>
+    </div>
+
+    <div id="carrousel">
+        <div id="items">
+            <ul>
+                <li class="first active">DPX</li>
+                <li class="second">Empresa</li>
+                <li class="third">Serviços</li>
+                <li class="fourth">Clientes</li>
+                <li class="fifth">Contato</li>
+            </ul>
+        </div>
+        <div id="content">
+            <ul>
+                <li class="first active">
+                    <div class="item">
+                        <div class="text">DPX</div>
+                        <!--<img src="Cumprimento.jpg" alt="DPX" />-->
+                        <img src="company.jpg" alt="Empresa" />
+                    </div>
+                </li>
+                <li class="second">
+                    <div class="item">
+                        <div class="text">Empresa</div>
+                        <img src="company2.png" alt="DPX" />
+                    </div>
+                </li>
+                <li class="third">
+                    <div class="item">
+                        <div class="text">Serviços</div>
+                        <img src="consultoria.jpg" alt="Serviços" />
+                    </div>
+                </li>
+                <li class="fourth">
+                    <div class="item">
+                        <div class="text">Clientes</div>
+                        <img src="clientes.jpg" alt="Clientes" />
+                    </div>
+                </li>
+                <li class="fifth">
+                    <div class="item">
+                        <div class="text">Contato</div>
+                        <img src="contato2.jpg" alt="Contato" />
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#carrousel #items li').click(function () {
+                $(this).parent().children().removeClass('active');
+                var position = $(this)[0].className;
+
+                $(this).addClass('active');
+
+
+                $("#carrousel #content ul").children().removeClass('active');
+                $("#carrousel #content ul").find('.' + position).addClass('active');
+            });
+        });
+    </script>
 </body>
 </html>
