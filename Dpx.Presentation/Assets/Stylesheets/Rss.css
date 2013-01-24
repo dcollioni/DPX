@@ -1,0 +1,45 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    font-family: ‘Lucida Sans Unicode’, ‘Lucida Grande’, sans-serif;
+}
+
+body {
+    padding: 10px;
+}
+
+li {
+    background: none repeat scroll 0 0 #DDDDDD;
+    list-style: none;
+}
+
+li:hover{
+   background-color: #4EA6EA;
+   color: white;
+}
+
+li:hover a{
+    color: white;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 1px;
+}
+
+li span {
+    display: block;
+    float: right;
+    margin: -29px 10px 0 0;
+    padding: 10px 30px 10px 10px;
+    background: url(../Images/Icons/screen-grey.png) no-repeat;
+}
+
+li:hover span{
+    background: url(../Images/Icons/screen-white.png) no-repeat;
+}
+

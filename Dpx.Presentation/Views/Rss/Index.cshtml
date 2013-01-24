@@ -1,0 +1,15 @@
+﻿<link rel="stylesheet" href="~/Assets/Stylesheets/Rss.css"/>
+<script type="text/javascript" src="~/Assets/Javascripts/App.js"></script>
+<script type="text/javascript" src="~/Assets/Javascripts/Controllers/RssController.js"></script>
+<script type="text/javascript" src="~/Assets/Javascripts/Services/RssStorage.js"></script>
+
+<div ng-app="rss">
+    <div ng-controller="RssController">
+        <ul id="rss">
+            <li ng-repeat="item in items">
+                <a href="{{item.Link}}" class="title">{{item.Title}}</a>
+                <span class="icon"></span>
+            </li>
+        </ul>
+    </div>
+</div>

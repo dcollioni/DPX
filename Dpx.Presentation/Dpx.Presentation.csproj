@@ -50,6 +50,7 @@
       <HintPath>..\packages\RavenDB.Client.2.0.2230\lib\net40\Raven.Client.Lightweight.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -92,6 +93,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Javascripts\Controllers\RssController.js" />
+    <Content Include="Assets\Javascripts\App.js" />
+    <Content Include="Assets\Javascripts\Services\RssStorage.js" />
+    <Content Include="Assets\Stylesheets\Rss.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -99,6 +104,7 @@
     <Compile Include="Configuration\RavenDbConfig.cs" />
     <Compile Include="Configuration\FilterConfig.cs" />
     <Compile Include="Configuration\RouteConfig.cs" />
+    <Compile Include="Controllers\RssController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Controllers\RavenController.cs" />
@@ -115,6 +121,7 @@
     <Content Include="Views\_ViewStart.cshtml">
       <SubType>Code</SubType>
     </Content>
+    <Content Include="Views\Rss\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>
@@ -124,9 +131,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\Images\" />
-    <Folder Include="Assets\Javascripts\" />
-    <Folder Include="Assets\Stylesheets\" />
+    <Folder Include="Assets\Images\Icons\" />
+    <Folder Include="Assets\Javascripts\Directives\" />
+    <Folder Include="Assets\Javascripts\Libraries\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Dpx.Domain\Dpx.Domain.csproj">
