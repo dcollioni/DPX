@@ -1,0 +1,42 @@
+Enderço original atual:
+
+http://dadalleduardo.wix.com/dpx-e
+
+--------------------------------------------------------
+
+Dúvidas enviadas por e-mail:
+
+- Vai querer manter na plataforma do Wix? Se sim, descarta as perguntas abaixo. Se não, continua lendo.
+- Vai querer que seja feito um layout pra tu aprovar antes de ele virar site mesmo?
+- Vai querer cadastrar informações dinâmicas (postagens, blog)?
+- Tu tem intenção de contratar um domínio? Por exemplo: www.dpx-e.com.br ?
+
+Respostas enviadas por e-mail:
+
+- Não. Podemos descartar o Wix.
+- Sim, gostaria de aprovar antes de dar sequencia.
+- Não. Apenas o site "estático", mas seria legal ter um só espaço tipo com Releases onde seriam apresentadas notícias (tipo esse que tem dentro do site da MMX - www.mmx.com.br).
+- Sim. O domínio minha ideia é ter um domínio próprio.
+
+Beleza Dani! A ideia é um site bem limpo tipo o da Vale (www.vale.com). Branco, com imagens e pequenos textos com aqueles "+" que direcionam para uma com algo mais completo para ser lido, porém bem menos "extenso" que o da vale, ou seja, sem tantos links, com o "Mapa do Site" menor... não sei se me fiz entende.
+
+--------------------------------------------------------
+
+Outras informações levantadas via e-mail:
+
+De Daniel:
+
+Conversei com o pessoal aqui e vamos fazer um layout pra te mostrar. 
+Tua ideia nesse cadastro de notícias, é tu mesmo fazer o cadastro? Como uma espécie de postagem de blog? Acho que seria bacana assim, aí a gente faz um cadastro pra tu poder registrar essas notícias e elas são exibidas no site dinamicamente.
+Podemos colocar também uma área de entre em contato, com um formulário simples de contato pra quem quiser mais informações sobre os produtos e serviços da DPX.
+
+
+De Eduardo:
+
+Na verdade não seria bem um cadastro de notícias... teríamos duas coisas separadas. Uma delas seria os locais com aqueles "+", como no site da Vale, onde nestes "+" o utilizador seria levado para uma nova tela. A outra seria apenas uma caixa onde apareceriam alguns releases... apenas pequenas frases informativas, mas sem conteúdo em outro link.
+A área de contato é muito importante, pois é através dela que as vendas serão concretizadas.
+
+
+--------------------------------------------------------
+
+Contratação do domínio será por conta do cliente
