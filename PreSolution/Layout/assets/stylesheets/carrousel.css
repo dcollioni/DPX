@@ -35,7 +35,7 @@ body {
 
 /*HEADER*/
 
-#carrousel header li a, #carrousel section {
+#carrousel header li a, #carrousel section, #carrousel .social img {
     -webkit-transition: box-shadow 250ms, background-color 250ms, border-color 250ms, text-shadow 250ms;
     -moz-transition: box-shadow 250ms, background-color 250ms, border-color 250ms, text-shadow 250ms;
     transition: box-shadow 250ms, background-color 250ms, border-color 250ms, text-shadow 250ms;
@@ -91,8 +91,7 @@ body {
 
 /*BODY*/
 
-#carrousel section
-{
+#carrousel section {
     background-color: #F2F2F2;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -110,30 +109,56 @@ body {
 
 #carrousel section img {
     float: right;
-    height: 265px;
+    height: 295px;
     width: 100%;
 }
 
 #carrousel section:hover {
-    box-shadow: 0px 0px 10px #888;
+    box-shadow: 0px 0px 20px #888;
 }
 
 /*FOOTER*/
-#carrousel footer {
-    text-align: right;
-    background: black;
-}
 
-#carrousel footer ul {
-    padding: 10px;
+#carrousel footer {
+    bottom: 15px;
+    position: absolute;
+    right: 20px;
+    z-index: 10;
 }
 
 #carrousel footer ul li {
-    display: inline;
-    margin-left: 10px;
+    float: left;
+    margin-left: 7px;
+}
 
+#carrousel footer ul li a {
+    background: url("../images/switcher.png");
+    float: left;
+    height: 11px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 12px;
 }
 
 #carrousel footer ul li a.selected {
-    color: red;
+    background-position: 0 -11px;
+}
+
+/*SOCIAL*/
+#carrousel {
+    position: relative;
+}
+
+#carrousel .social {
+    left: 46%;
+    position: absolute;
+    top: 83%;
+}
+
+#carrousel .social img {
+    border: none;
+    box-shadow: 0 0 10px #888;
+    height: 32px;
+    margin: 5px;
+    width: 32px;
 }
