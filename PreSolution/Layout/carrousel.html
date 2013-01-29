@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="assets/stylesheets/carrousel.css">
     </head>
     <body>
-        <div id="carrousel" ng-app="dpx" ng-controller="CarrouselController">
+        <div id="carrousel" ng-app="dpx" ng-controller="CarrouselController" ng-mouseout="turnOn()" ng-mouseenter="turnOff()">
             <header>
                 <ul>
                     <li ng-repeat="item in items">
@@ -15,8 +15,8 @@
                 </ul>
             </header>
 
-            <section ng-mouseout="turnOn()" ng-mouseenter="turnOff()">
-                <img ng-repeat="item in items" ng-src="{{item.src}}" ng-fadein="item.selected">
+            <section>
+                <div ng-repeat="item in items" ng-background-image="{{item.src}}" ng-fade-in="item.selected">
                 <footer>
                     <ul>
                         <li ng-repeat="item in items">
@@ -25,6 +25,7 @@
                     </ul>
                 </footer>
             </section>
+
             <div class="social" ng-show="showSocial()">
                 <a ng-repeat="network in networks" href="{{network.href}}" target="_blank">
                     <img ng-src="{{network.src}}" alt="{{network.alt}}" />
@@ -37,6 +38,7 @@
         <script type="text/javascript" src="assets/javascripts/directives/mouseenter.js"></script>
         <script type="text/javascript" src="assets/javascripts/directives/mouseout.js"></script>
         <script type="text/javascript" src="assets/javascripts/directives/fadein.js"></script>
+        <script type="text/javascript" src="assets/javascripts/directives/backgroundimage.js"></script>
         <script type="text/javascript" src="assets/javascripts/controllers/carrousel.js"></script>
     </body>
 </html>

@@ -107,7 +107,7 @@ body {
     text-shadow: 1px 1px #444;
 }
 
-#carrousel section img {
+#carrousel section>div { /*img*/
     float: right;
     height: 295px;
     width: 100%;
@@ -150,7 +150,7 @@ body {
 }
 
 #carrousel .social {
-    left: 46%;
+    left: 57%;
     position: absolute;
     top: 83%;
 }

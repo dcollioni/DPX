@@ -7,13 +7,13 @@ dpx.controller('CarrouselController', function($scope){
         { title: 'Contato',  src: 'assets/images/fifth.jpg',  selected: false, nextIndex: 0 }
     ];
 
+    $scope.getSelected = function(){
+        return $scope.items.filter(function(item){ return item.selected; })[0];
+    };
+
     $scope.select = function(clickedItem){
         $scope.getSelected().selected = false;
         clickedItem.selected = true;
-    };
-
-    $scope.getSelected = function(){
-        return $scope.items.filter(function(item){ return item.selected; })[0];
     };
 
     $scope.next = function(){
@@ -23,7 +23,7 @@ dpx.controller('CarrouselController', function($scope){
 
     $scope.turnOn = function(){
         $scope.turnOff();
-        $scope.intervalId = setInterval($scope.next, 4000);
+        $scope.intervalId = setInterval($scope.next, 3000);
     }
 
     $scope.turnOff = function(){
@@ -35,7 +35,7 @@ dpx.controller('CarrouselController', function($scope){
     };
 
     $scope.networks = [
-        { href: 'http://facebook.com',  src: 'assets/images/facebook.png', alt: 'Facebook' },
+        { href: 'http://facebook.com', src: 'assets/images/facebook.png', alt: 'Facebook' },
         { href: 'http://twitter.com', src: 'assets/images/twitter.png', alt: 'Twitter' },
         { href: 'http://linkedin.com', src: 'assets/images/linkedin.png', alt: 'LinkedIn' },
         { href: 'http://plus.google.com', src: 'assets/images/googleplus.png', alt: 'Google+' }
