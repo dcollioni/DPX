@@ -1,0 +1,139 @@
+/*BASE*/
+
+@font-face {
+    font-family: Sansation;
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/sansation/Sansation_Regular.ttf);
+}
+
+@font-face {
+    font-family: Sansation;
+    font-style: normal;
+    font-weight: bold;
+    src: url(../fonts/sansation/Sansation_Bold.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-image: url(../images/background.png);
+    background-color: #F8F8F8;
+    font-family: Sansation, Arial, Helevetica, Sans-Serif;
+}
+
+/*HEADER*/
+
+#carrousel header li a, #carrousel section {
+    -webkit-transition: box-shadow 250ms, background-color 250ms, border-color 250ms, text-shadow 250ms;
+    -moz-transition: box-shadow 250ms, background-color 250ms, border-color 250ms, text-shadow 250ms;
+    transition: box-shadow 250ms, background-color 250ms, border-color 250ms, text-shadow 250ms;
+}
+
+#carrousel {
+    height: 300px;
+    margin: 30px 4%;
+}
+
+#carrousel header {
+    float: left;
+    width: 20%;
+    margin-right: 10px;
+}
+
+#carrousel header li {
+    text-align: center;
+}
+
+#carrousel header li a {
+    display: block;
+    border: 1px solid #BBB;
+    background-color: #D4DFEE;
+    color: #3066AD;
+    cursor: pointer;
+    font-size: 14pt;
+    font-weight: bold;
+    height: 55px;
+    margin: 3px 0;
+    line-height: 54px;
+    text-shadow: 1px 1px #DDD;
+}
+
+#carrousel header li a:hover
+{
+    border-color: #AAA;
+    box-shadow: 0px 0px 6px #AAA;
+}
+
+#carrousel header li a.selected
+{
+    background-color: #366AAA;
+    border-color: #888;
+    border-right: none;
+    box-shadow: 0px 0px 15px #AAA;
+    color: #D4DFEE;
+    padding-right: 8px;
+    margin-right: -6px;
+    text-shadow: 1px 1px #888;
+}
+
+
+/*BODY*/
+
+#carrousel section
+{
+    background-color: #F2F2F2;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-shadow: 3px 0px 15px #CCC;
+    border: 1px solid #AAA;
+    border-left: none;
+    display: inline-block;
+    height: 297px;
+    margin: 3px 0;
+    padding: 0;
+    width: 79%;
+    cursor: pointer;
+    text-shadow: 1px 1px #444;
+}
+
+#carrousel section img {
+    float: right;
+    height: 265px;
+    width: 100%;
+}
+
+#carrousel section:hover {
+    box-shadow: 0px 0px 10px #888;
+}
+
+/*FOOTER*/
+#carrousel footer {
+    text-align: right;
+    background: black;
+}
+
+#carrousel footer ul {
+    padding: 10px;
+}
+
+#carrousel footer ul li {
+    display: inline;
+    margin-left: 10px;
+
+}
+
+#carrousel footer ul li a.selected {
+    color: red;
+}

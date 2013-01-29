@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DPX - Desenvolvimento de Planilhas em Excel</title>
+        <link rel="stylesheet" href="assets/stylesheets/carrousel.css">
+    </head>
+    <body>
+        <div id="carrousel" ng-app="dpx" ng-controller="CarrouselController">
+            <header>
+                <ul>
+                    <li ng-repeat="item in items">
+                        <a href="#" ng-click="select(item)" ng-class="{selected: item.selected}">{{item.title}}</a>
+                    </li>
+                </ul>
+            </header>
+
+            <section>
+                <img ng-repeat="item in items" ng-src="{{item.src}}" ng-show="item.selected">
+                <footer>
+                    <ul>
+                        <li ng-repeat="item in items">
+                            <a href="#" ng-mouseenter="select(item)" ng-class="{selected: item.selected}">x</a>
+                        </li>
+                    </ul>
+                </footer>
+            </section>
+        </div>
+        <script type="text/javascript" src="assets/javascripts/libraries/angular.js"></script>
+        <script type="text/javascript" src="assets/javascripts/application.js"></script>
+        <script type="text/javascript" src="assets/javascripts/directives/hover.js"></script>
+        <script type="text/javascript" src="assets/javascripts/controllers/carrousel.js"></script>
+    </body>
+</html>
