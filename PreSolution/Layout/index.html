@@ -59,6 +59,11 @@
             transition: text-shadow 250ms, background-color 250ms;
         }
         
+        div.clear
+        {
+            clear: both;
+        }
+        
         #header
         {
             height: 70px;
@@ -348,17 +353,17 @@
         
         #news .title
         {
-            border-bottom: 2px solid #658;
-            color: #436;
+            border-bottom: 2px solid #568;
+            color: #346;
             font-size: 14pt;
             font-weight: bold;
             padding: 10px;
-            text-shadow: 1px 1px #BAD;
+            text-shadow: 1px 1px #DDD;
         }
         
         #news .content
         {
-            background-color: #E8E8E8;
+            background-color: #E6E6E6;
             padding: 10px;
         }
         
@@ -389,14 +394,14 @@
         
         #news .more
         {
-            background-color: #E8E8E8;
+            background-color: #E6E6E6;
             padding: 10px;
             text-align: center;
         }
         
         #news .more a
         {
-            background-color: #658;
+            background-color: #568;
             color: #FFF;
             float: right;
             font-family: Arial;
@@ -410,21 +415,136 @@
         
         #news .more a:hover
         {
-            background-color: #436;
+            background-color: #346;
         }
         
         /* Facebook */
         #facebook
         {
-            /*background-color: #DDD;
-            border: 1px solid #BBB;*/
             float: right;
-            margin: 0 5% 0 0;
+            margin: -20px 5% 0 0;
             width: 42%;
+        }
+        #facebook .title
+        {
+            border-bottom: 2px solid #568;
+            color: #346;
+            font-size: 14pt;
+            font-weight: bold;
+            padding: 10px;
+            text-shadow: 1px 1px #DDD;
+        }
+        
+        #facebook .content
+        {
+            background-color: #E6E6E6;
+            font-size: 10pt;
+            padding: 20px;
+        }
+        
+        /* Footer */
+        #footer
+        {
+            border-bottom: 4px solid #124;
+            border-top: 1px solid #124;
+            border-left: none;
+            border-right: none;
+            background-color: #346;
+            box-shadow: 0px 0px 20px #346;
+            height: 200px;
+            margin: 0;
+            margin-top: 50px;
+            width: 100%;
+        }
+        
+        #footer .sitemap
+        {
+            border-left: 2px solid #EEE;
+            float: left;
+            margin: 25px 10%;
+        }
+        #footer .sitemap ul
+        {
+            list-style: none;
+            margin: 0 10px;
+            padding: 0;
+        }
+        #footer .sitemap ul li
+        {
+            margin: 15px 0;
+        }
+        #footer .sitemap ul li:first-child,
+        #footer .sitemap ul li:last-child
+        {
+            margin: 0;
+        }
+        #footer .sitemap a
+        {
+            color: #EEE;
+            text-decoration: none;
+            text-shadow: 1px 1px #222;
+        }
+        #footer .sitemap a:hover
+        {
+            color: #FFF;
+            text-shadow: 1px 1px #666;
+        }
+        
+        #footer .social
+        {
+            float: left;
+            margin: 55px 10px;
+        }
+        #footer .social img
+        {
+            border: none;
+            box-shadow: 0 0 10px #222;
+        }
+        #footer .social img:hover
+        {
+            box-shadow: 0 0 10px #888;
+        }
+        #footer .social a
+        {
+            margin: 10px;
+            text-decoration: none;
+        }
+        
+        #footer .text
+        {
+            color: #BCE;
+            float: right;
+            margin: 80px 10% 0 0;
+            text-shadow: 1px 1px #222;
+        }
+        #footer .text span
+        {
+            margin: 0 20px;
+        }
+        #footer .text span.trid
+        {
+            font-size: 8pt;
+        }
+        #footer .text span img
+        {
+            vertical-align: middle;
+            height: 40px;
+            width: 40px;
         }
     </style>
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "http://connect.facebook.net/pt_BR/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        } (document, 'script', 'facebook-jssdk'));
+    </script>
+
     <div id="topline">
     </div>
     
@@ -470,18 +590,10 @@
                             <p>Eduardo Dadall</p>
 
                             <div class="social">
-                                <a href="http://facebook.com" target="_blank">
-                                    <img src="32x32-Square-57-FB.png" alt="Facebook" />
-                                </a>
-                                <a href="http://twitter.com" target="_blank">
-                                    <img src="32x32-Square-63-TW.png" alt="Twitter" />
-                                </a>
-                                <a href="http://linkedin.com" target="_blank">
-                                    <img src="32x32-Square-59-LI.png" alt="LinkedIn" />
-                                </a>
-                                <a href="http://plus.google.com" target="_blank">
-                                    <img src="32x32-Square-83-GP.png" alt="Google+" />
-                                </a>
+                                <a href="http://facebook.com" target="_blank"><img src="32x32-Square-57-FB.png" alt="Facebook" /></a>
+                                <a href="http://twitter.com" target="_blank"><img src="32x32-Square-63-TW.png" alt="Twitter" /></a>
+                                <a href="http://linkedin.com" target="_blank"><img src="32x32-Square-59-LI.png" alt="LinkedIn" /></a>
+                                <a href="http://plus.google.com" target="_blank"><img src="32x32-Square-83-GP.png" alt="Google+" /></a>
                             </div>
                         </div>
                     </div>
@@ -581,6 +693,49 @@
     </div>
 
     <div id="facebook">
+        <div class="title">Facebook</div>
+        <div class="content">
+            <!--<div class="fb-like" data-href="http://www.facebook.com/dpxexcel" data-send="false" data-width="450" data-show-faces="true" data-font="tahoma"></div>-->
+            35 pessoas curtiram isso. Seja o primeiro entre seus amigos.
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div id="footer">
+        <div class="sitemap">
+            <ul>
+                <li>
+                    <a href="#">Capa</a>
+                </li>
+                <li>
+                    <a href="#">Empresa</a>
+                </li>
+                <li>
+                    <a href="#">Serviços</a>
+                </li>
+                <li>
+                    <a href="#">Clientes</a>
+                </li>
+                <li>
+                    <a href="#">Contato</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="social">
+            <a href="http://facebook.com" target="_blank"><img src="32x32-Square-57-FB.png" alt="Facebook" /></a>
+            <a href="http://twitter.com" target="_blank"><img src="32x32-Square-63-TW.png" alt="Twitter" /></a>
+            <br />
+            <br />
+            <a href="http://linkedin.com" target="_blank"><img src="32x32-Square-59-LI.png" alt="LinkedIn" /></a>
+            <a href="http://plus.google.com" target="_blank"><img src="32x32-Square-83-GP.png" alt="Google+" /></a>
+        </div>
+
+        <div class="text">
+            <span>&copy; 2013 DPX - Todos os direitos reservados</span>
+            <span class="trid">Desenvolvido por <img src="Logo-TriD4_60_light.png" /></span>
+        </div>
     </div>
 
     <script type="text/javascript" src="jquery.min.js"></script>
