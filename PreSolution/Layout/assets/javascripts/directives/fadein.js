@@ -1,8 +1,8 @@
-dpx.directive('ngFadeIn', function () {
+dpx.directive('dpxFadeIn', function () {
     return {
         restrict: 'A',
         link: function (scope, element, attribs) {
-            scope.$watch(attribs.ngFadeIn, function (value) {
+            scope.$watch(attribs.dpxFadeIn, function (value) {
                 if (value) {
                     $(element[0]).fadeIn();
                 } else {

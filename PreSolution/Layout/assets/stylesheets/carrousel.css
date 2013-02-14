@@ -1,62 +1,31 @@
-/*BASE*/
-
-@font-face {
-    font-family: Sansation;
-    font-style: normal;
-    font-weight: normal;
-    src: url(../fonts/sansation/Sansation_Regular.ttf);
-}
-
-@font-face {
-    font-family: Sansation;
-    font-style: normal;
-    font-weight: bold;
-    src: url(../fonts/sansation/Sansation_Bold.ttf);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
-
-body {
-    background-image: url(../images/background.png);
-    background-color: #F8F8F8;
-    font-family: Sansation, Arial, Helevetica, Sans-Serif;
-}
-
 /*HEADER*/
 
-#carrousel header li a, #carrousel section, #carrousel .social img {
+#carrousel #items li a, #carrousel #content {
     -webkit-transition: box-shadow 250ms, background-color 250ms, border-color 250ms, text-shadow 250ms;
     -moz-transition: box-shadow 250ms, background-color 250ms, border-color 250ms, text-shadow 250ms;
     transition: box-shadow 250ms, background-color 250ms, border-color 250ms, text-shadow 250ms;
 }
 
 #carrousel {
-    height: 300px;
-    margin: 30px 4%;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 2000px;
+    padding: 50px;
+    padding-bottom: 47px;
 }
 
-#carrousel header {
+#carrousel #items {
     float: left;
     width: 20%;
-    margin-right: 10px;
+    margin-right: 9px;
 }
 
-#carrousel header li {
+#carrousel #items li {
     text-align: center;
 }
 
-#carrousel header li a {
+#carrousel #items li a {
     display: block;
     border: 1px solid #BBB;
     background-color: #D4DFEE;
@@ -70,28 +39,28 @@ body {
     text-shadow: 1px 1px #DDD;
 }
 
-#carrousel header li a:hover
+#carrousel #items li a:hover
 {
     border-color: #AAA;
     box-shadow: 0px 0px 6px #AAA;
 }
 
-#carrousel header li a.selected
+#carrousel #items li a.selected
 {
     background-color: #366AAA;
     border-color: #888;
     border-right: none;
     box-shadow: 0px 0px 15px #AAA;
     color: #D4DFEE;
-    padding-right: 8px;
-    margin-right: -6px;
+    padding-right: 9px;
+    margin-right: -7px;
     text-shadow: 1px 1px #888;
 }
 
 
 /*BODY*/
 
-#carrousel section {
+#carrousel #content {
     background-color: #F2F2F2;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -107,58 +76,161 @@ body {
     text-shadow: 1px 1px #444;
 }
 
-#carrousel section>div { /*img*/
+#carrousel #content li { /*img*/
     float: right;
+    color: #EEE;
+    cursor: pointer;
+    text-shadow: 1px 1px #444;
     height: 295px;
     width: 100%;
 }
 
-#carrousel section:hover {
-    box-shadow: 0px 0px 20px #888;
+#carrousel #content:hover {
+    box-shadow: 0px 0px 10px #888;
 }
 
 /*FOOTER*/
 
-#carrousel footer {
-    bottom: 15px;
-    position: absolute;
-    right: 20px;
+#carrousel #switcher {
+    position: relative;
+    float: right;
+}
+
+#carrousel #switcher ul {
     z-index: 10;
+    position: absolute;
+    top: 270px;
+    right: 20px;
+    width: 80px;
 }
 
-#carrousel footer ul li {
-    float: left;
-    margin-left: 7px;
+#carrousel #switcher li {
+    display: inline;
 }
 
-#carrousel footer ul li a {
+#carrousel #switcher li a {
+    display: inline-block;
     background: url("../images/switcher.png");
-    float: left;
     height: 11px;
+    width: 12px;
     overflow: hidden;
     text-indent: -9999px;
-    width: 12px;
 }
 
-#carrousel footer ul li a.selected {
+#carrousel #switcher li a.selected {
     background-position: 0 -11px;
 }
 
-/*SOCIAL*/
-#carrousel {
-    position: relative;
+
+
+
+#carrousel #content .first {
+    background: url(../images/dpx.jpg);
+}
+#carrousel #content .second {
+    background: url(../images/company.jpg);
+}
+#carrousel #content .third {
+    background: url(../images/services.jpg);
+}
+#carrousel #content .fourth {
+    background: url(../images/clients.jpg);
+}
+#carrousel #content .fifth {
+    background: url(../images/contact.jpg);
 }
 
-#carrousel .social {
-    left: 57%;
-    position: absolute;
-    top: 83%;
+
+
+
+
+#carrousel #content .text
+{
+    cursor: pointer;
+    float: left;
+    font-size: 16pt;
+    text-shadow: 1px 1px #222;
+    text-align: center;
 }
 
-#carrousel .social img {
+#carrousel #content .text p
+{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/* Carrousel First */
+#carrousel #content .first .social
+{
+    float: left;
+    margin: 30px 0 0 180px;
+}
+#carrousel #content .first .social img
+{
     border: none;
     box-shadow: 0 0 10px #888;
     height: 32px;
     margin: 5px;
     width: 32px;
+}
+#carrousel #content .first .social img:hover
+{
+    box-shadow: 0 0 10px #444;
+}
+#carrousel #content .first .text
+{
+    cursor: default;
+    margin: 45px 0 0 70px;
+}
+
+/* Carrousel Second */
+#carrousel #content .second .text
+{
+    margin-top: 80px;
+    margin: 70px 0 0 70px;
+}
+
+/* Carrousel Third */
+#carrousel #content .third .text
+{
+    margin: 40px 0 0 80px;
+    text-align: left;
+}
+#carrousel #content .third .text .sub
+{
+    font-size: 12pt;
+}
+
+/* Carrousel Fourth */
+#carrousel #content .fourth .text
+{
+    margin: 55px 0 0 80px;
+    text-align: left;
+}
+
+/* Carrousel Fifth */
+#carrousel #content .fifth .text
+{
+    font-size: 18pt;
+    margin: 70px 0 0 80px;
+}
+
+/* Carrousel Details */
+#carrousel #content .details
+{
+    background-image: url(../images/transparent.png);
+    color: #FFF;
+    float: right;
+    font-size: 22pt;
+    font-weight: bold;
+    height: 100%;
+    line-height: 295px;
+    opacity: 0;
+    text-shadow: 1px 1px #666;
+    width: 300px;
+    text-align: center;
+}
+#carrousel #content li:hover .details
+{
+    opacity: 1;
 }

@@ -1,7 +1,7 @@
-dpx.directive('ngMouseenter', function() {
+dpx.directive('dpxMouseenter', function() {
     return function(scope, element, attributes) {
         element.bind('mouseenter', function() {
-            scope.$apply(attributes.ngMouseenter);
+            scope.$apply(attributes.dpxMouseenter);
         });
     };
 });

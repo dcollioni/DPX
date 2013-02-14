@@ -1,7 +1,7 @@
-dpx.directive('ngMouseout', function() {
+dpx.directive('dpxMouseout', function() {
     return function(scope, element, attributes) {
         element.bind('mouseout', function() {
-            scope.$apply(attributes.ngMouseout);
+            scope.$apply(attributes.dpxMouseout);
         });
     };
 });
