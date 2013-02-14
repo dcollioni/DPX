@@ -93,9 +93,28 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Fonts\sansation\Sansation_1.31_ReadMe.txt" />
+    <Content Include="Assets\Fonts\sansation\Sansation_plate.jpg" />
+    <Content Include="Assets\Images\32x32-Square-57-FB.png" />
+    <Content Include="Assets\Images\32x32-Square-59-LI.png" />
+    <Content Include="Assets\Images\32x32-Square-63-TW.png" />
+    <Content Include="Assets\Images\32x32-Square-83-GP.png" />
+    <Content Include="Assets\Images\bg.png" />
+    <Content Include="Assets\Images\clients.jpg" />
+    <Content Include="Assets\Images\company.jpg" />
+    <Content Include="Assets\Images\contact.jpg" />
+    <Content Include="Assets\Images\dpx.jpg" />
+    <Content Include="Assets\Images\eduardo.png" />
+    <Content Include="Assets\Images\jquery.min.js" />
+    <Content Include="Assets\Images\Logo-TriD4_60.png" />
+    <Content Include="Assets\Images\Logo-TriD4_60_light.png" />
+    <Content Include="Assets\Images\logo.png" />
+    <Content Include="Assets\Images\services.jpg" />
+    <Content Include="Assets\Images\transparent.png" />
     <Content Include="Assets\Javascripts\Controllers\RssController.js" />
     <Content Include="Assets\Javascripts\App.js" />
     <Content Include="Assets\Javascripts\Services\RssStorage.js" />
+    <Content Include="Assets\Stylesheets\App.css" />
     <Content Include="Assets\Stylesheets\Rss.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -122,6 +141,13 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="Views\Rss\Index.cshtml" />
+    <Content Include="Assets\Fonts\sansation\Sansation_Bold.ttf" />
+    <Content Include="Assets\Fonts\sansation\Sansation_Bold_Italic.ttf" />
+    <Content Include="Assets\Fonts\sansation\Sansation_Italic.ttf" />
+    <Content Include="Assets\Fonts\sansation\Sansation_Light.ttf" />
+    <Content Include="Assets\Fonts\sansation\Sansation_Light_Italic.ttf" />
+    <Content Include="Assets\Fonts\sansation\Sansation_Regular.ttf" />
+    <Content Include="Assets\Images\logo.pdn" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>

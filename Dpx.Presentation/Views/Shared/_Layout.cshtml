@@ -1,12 +1,92 @@
-﻿<!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="utf-8" />
-        <title>DPX - Desenvolvimento de Planilhas em Excel</title>
-        @*<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>*@
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js"></script>
-    </head>
-    <body>
-        @RenderBody()
-    </body>
+﻿<!DOCTYPE htmls>
+<html>
+<head>
+
+    <meta charset="utf-8">
+
+    <title>DPX - Desenvolvimento de Planilhas em Excel</title>
+
+    <link type="text/css" rel="stylesheet" href="~/Assets/Stylesheets/App.css" />
+
+    @*<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>*@
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js"></script>
+</head>
+<body>
+    <div id="topline"></div>
+
+    <div id="header" class="unselectable">
+        <img src="~/Assets/Images/logo.png" alt="DPX" />
+        <h1>
+            Desenvolvimento<br />
+            de Planilhas em Excel</h1>
+        <div id="menu">
+            <ul>
+                <li><a href="#" class="active">Capa</a> </li>
+                <li class="separator">|</li>
+                <li><a href="#">Empresa</a> </li>
+                <li class="separator">|</li>
+                <li><a href="#">Serviços</a> </li>
+                <li class="separator">|</li>
+                <li><a href="#">Clientes</a> </li>
+                <li class="separator">|</li>
+                <li><a href="#">Contato</a> </li>
+            </ul>
+        </div>
+    </div>
+
+    @RenderBody()
+
+    <div class="clear"></div>
+
+    <div id="footer">
+        <div class="sitemap">
+            <ul>
+                <li>
+                    <a href="#">Capa</a>
+                </li>
+                <li>
+                    <a href="#">Empresa</a>
+                </li>
+                <li>
+                    <a href="#">Serviços</a>
+                </li>
+                <li>
+                    <a href="#">Clientes</a>
+                </li>
+                <li>
+                    <a href="#">Contato</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="social">
+            <a href="http://facebook.com" target="_blank"><img src="~/Assets/Images/32x32-Square-57-FB.png" alt="Facebook" /></a>
+            <a href="http://twitter.com" target="_blank"><img src="~/Assets/Images/32x32-Square-63-TW.png" alt="Twitter" /></a>
+            <br />
+            <br />
+            <a href="http://linkedin.com" target="_blank"><img src="~/Assets/Images/32x32-Square-59-LI.png" alt="LinkedIn" /></a>
+            <a href="http://plus.google.com" target="_blank"><img src="~/Assets/Images/32x32-Square-83-GP.png" alt="Google+" /></a>
+        </div>
+
+        <div class="text">
+            <span>&copy; 2013 DPX - Todos os direitos reservados</span>
+            <span class="trid">Desenvolvido por <img src="~/Assets/Images/Logo-TriD4_60_light.png" /></span>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $('#carrousel #items li').click(function () {
+                $(this).parent().children().removeClass('active');
+                var position = $(this)[0].className;
+
+                $(this).addClass('active');
+
+                $("#carrousel #content ul").children().hide();
+                $("#carrousel #content ul").find('.' + position).fadeIn();
+            });
+        });
+    </script>
+</body>
 </html>
