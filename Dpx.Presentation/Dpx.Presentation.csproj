@@ -110,11 +110,11 @@
     <Content Include="Assets\Images\Logo-TriD4_60_light.png" />
     <Content Include="Assets\Images\logo.png" />
     <Content Include="Assets\Images\services.jpg" />
+    <Content Include="Assets\Images\switcher.png" />
     <Content Include="Assets\Images\transparent.png" />
     <Content Include="Assets\Javascripts\app.js" />
     <Content Include="Assets\Javascripts\Controllers\carrousel.js" />
     <Content Include="Assets\Javascripts\Controllers\rss.js" />
-    <Content Include="Assets\Javascripts\application.js" />
     <Content Include="Assets\Javascripts\Directives\fadein.js" />
     <Content Include="Assets\Javascripts\Directives\mouseenter.js" />
     <Content Include="Assets\Javascripts\Directives\mouseout.js" />
