@@ -1,1 +1,1 @@
-﻿var rss = angular.module('rss', []);
+var dpx = angular.module('dpx', []);

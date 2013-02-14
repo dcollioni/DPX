@@ -1,17 +1,13 @@
 ﻿<!DOCTYPE htmls>
 <html>
 <head>
-
     <meta charset="utf-8">
-
     <title>DPX - Desenvolvimento de Planilhas em Excel</title>
-
-    <link type="text/css" rel="stylesheet" href="~/Assets/Stylesheets/App.css" />
-
-    @*<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>*@
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js"></script>
+    <link rel="stylesheet" href="@Url.Content("Assets/Stylesheets/reset.css")"/>
+    <link rel="stylesheet" href="@Url.Content("Assets/stylesheets/app.css")"/>
+    <link rel="stylesheet" href="@Url.Content("Assets/stylesheets/carrousel.css")"/>
 </head>
-<body>
+<body ng-app="dpx">
     <div id="topline"></div>
 
     <div id="header" class="unselectable">
@@ -74,19 +70,12 @@
         </div>
     </div>
 
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $('#carrousel #items li').click(function () {
-                $(this).parent().children().removeClass('active');
-                var position = $(this)[0].className;
-
-                $(this).addClass('active');
-
-                $("#carrousel #content ul").children().hide();
-                $("#carrousel #content ul").find('.' + position).fadeIn();
-            });
-        });
-    </script>
+    <script type="text/javascript" src="@Url.Content("Assets/javascripts/libraries/angular.js")"></script>
+    <script type="text/javascript" src="@Url.Content("Assets/javascripts/libraries/jquery.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("Assets/javascripts/app.js")"></script>
+    <script type="text/javascript" src="@Url.Content("Assets/javascripts/directives/mouseenter.js")"></script>
+    <script type="text/javascript" src="@Url.Content("Assets/javascripts/directives/mouseout.js")"></script>
+    <script type="text/javascript" src="@Url.Content("Assets/javascripts/directives/fadein.js")"></script>
+    <script type="text/javascript" src="@Url.Content("Assets/javascripts/controllers/carrousel.js")"></script>
 </body>
 </html>
