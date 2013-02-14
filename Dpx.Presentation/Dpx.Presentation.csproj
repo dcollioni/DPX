@@ -111,17 +111,20 @@
     <Content Include="Assets\Images\logo.png" />
     <Content Include="Assets\Images\services.jpg" />
     <Content Include="Assets\Images\transparent.png" />
-    <Content Include="Assets\Javascripts\application.js" />
+    <Content Include="Assets\Javascripts\app.js" />
     <Content Include="Assets\Javascripts\Controllers\carrousel.js" />
     <Content Include="Assets\Javascripts\Controllers\rss.js" />
+    <Content Include="Assets\Javascripts\application.js" />
     <Content Include="Assets\Javascripts\Directives\fadein.js" />
     <Content Include="Assets\Javascripts\Directives\mouseenter.js" />
     <Content Include="Assets\Javascripts\Directives\mouseout.js" />
     <Content Include="Assets\Javascripts\Libraries\angular.js" />
     <Content Include="Assets\Javascripts\Libraries\jquery.min.js" />
     <Content Include="Assets\Javascripts\Services\rss_storage.js" />
-    <Content Include="Assets\Stylesheets\App.css" />
-    <Content Include="Assets\Stylesheets\Rss.css" />
+    <Content Include="Assets\Stylesheets\app.css" />
+    <Content Include="Assets\Stylesheets\carrousel.css" />
+    <Content Include="Assets\Stylesheets\reset.css" />
+    <Content Include="Assets\Stylesheets\rss.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -196,11 +199,4 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
