@@ -108,6 +108,7 @@
     <Content Include="Assets\Images\jquery.min.js" />
     <Content Include="Assets\Images\Logo-TriD4_60.png" />
     <Content Include="Assets\Images\Logo-TriD4_60_light.png" />
+    <Content Include="Assets\Images\Logo-TriD-Light-40.png" />
     <Content Include="Assets\Images\logo.png" />
     <Content Include="Assets\Images\services.jpg" />
     <Content Include="Assets\Images\switcher.png" />
