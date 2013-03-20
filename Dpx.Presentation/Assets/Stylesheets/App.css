@@ -304,10 +304,11 @@ div.clear
 
 #footer .text
 {
-    color: #BCE;
+    color: #124;
     float: right;
     margin: 80px 10% 0 0;
-    text-shadow: 1px 1px #222;
+    text-shadow: 1px 1px #457;
+    cursor: default;
 }
 #footer .text span
 {
